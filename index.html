@@ -2,33 +2,63 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Game Hub - FPS & Casual Mini Games</title>
+    <title>Game Hub - 전문 웹 기반 무설치 게임 플랫폼</title>
+    <meta name="description" content="설치 없이 즐기는 고성능 웹 게임 허브. 에임 연습장, 패턴 피하기 등 다양한 FPS 및 캐주얼 게임을 제공합니다.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4133279395991822" crossorigin="anonymous"></script>
     <style>
-        :root { --primary-color: #f1c40f; --bg-color: #0c0c0c; }
-        body { margin: 0; background: var(--bg-color); color: white; font-family: 'Pretendard', sans-serif; text-align: center; }
-        .header { padding: 60px 20px; background: linear-gradient(to bottom, #1a1a1a, var(--bg-color)); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .game-card { background: #1a1a1a; border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; cursor: pointer; text-decoration: none; color: inherit; }
-        .game-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
-        .game-img { width: 100%; height: 160px; background: #333; display: flex; align-items: center; justify-content: center; font-size: 40px; }
-        .game-info { padding: 20px; }
-        .game-info h3 { margin: 0; color: var(--primary-color); }
-        #version-tag { position: fixed; bottom: 12px; right: 18px; font-size: 14px; color: rgba(255, 255, 255, 0.3); }
+        :root { --primary-color: #f1c40f; --bg-color: #0c0c0c; --card-bg: #1a1a1a; }
+        body { margin: 0; background: var(--bg-color); color: white; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; text-align: center; line-height: 1.6; }
+        
+        .header { padding: 80px 20px; background: linear-gradient(to bottom, #1a1a1a, var(--bg-color)); }
+        .header h1 { font-size: 56px; letter-spacing: 6px; margin: 0; color: var(--primary-color); text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .header p { font-size: 18px; color: #888; margin-top: 15px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
+        .game-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid #333; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .game-card:hover { transform: translateY(-15px); border-color: var(--primary-color); box-shadow: 0 10px 30px rgba(241, 196, 15, 0.2); }
+        
+        .game-img { width: 100%; height: 180px; background: #252525; display: flex; align-items: center; justify-content: center; font-size: 60px; transition: 0.3s; }
+        .game-card:hover .game-img { background: #333; transform: scale(1.05); }
+        
+        .game-info { padding: 25px; text-align: left; border-top: 1px solid #222; }
+        .game-info h3 { margin: 0; color: var(--primary-color); font-size: 24px; }
+        .game-info p { margin: 10px 0 0; color: #aaa; font-size: 15px; height: 45px; overflow: hidden; }
+
+        /* SEO용 텍스트 섹션 */
+        .content-section { max-width: 900px; margin: 80px auto; padding: 40px 20px; text-align: left; border-top: 1px solid #333; color: #bbb; }
+        .content-section h2 { color: var(--primary-color); font-size: 32px; margin-bottom: 30px; }
+        .content-section h3 { color: #eee; margin-top: 40px; }
+        .content-section p { margin-bottom: 20px; font-size: 16px; line-height: 1.8; }
+
+        #version-tag { position: fixed; bottom: 12px; right: 18px; font-size: 14px; color: rgba(255, 255, 255, 0.3); z-index: 1000; }
+        
+        @media (max-width: 600px) {
+            .header h1 { font-size: 36px; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1 style="font-size: 48px; letter-spacing: 4px;">🎮 GAME HUB</h1>
-        <p>무설치 브라우저 기반 게임 리스트</p>
+        <h1>🎯 GAME HUB</h1>
+        <p>Next-Gen Web Gaming Experience without Installation</p>
     </header>
 
     <main class="grid">
-        <a href="https://your-aim-trainer-url.vercel.app" class="game-card">
+        <a href="https://dummy-server-kdna.vercel.app/" class="game-card">
             <div class="game-img">🎯</div>
             <div class="game-info">
                 <h3>Aim Trainer</h3>
-                <p>Three.js 기반의 정밀 에임 훈련</p>
+                <p>Three.js 기반의 고성능 FPS 에임 훈련 도구. 반응 속도와 정확도를 테스트하세요.</p>
+            </div>
+        </a>
+
+        <a href="#" class="game-card" style="cursor: help;">
+            <div class="game-img">🛡️</div>
+            <div class="game-info">
+                <h3>패턴 피하기 (Avoidance)</h3>
+                <p>무작위로 쏟아지는 탄막과 패턴을 피하며 한계에 도전하세요. (개발 중)</p>
             </div>
         </a>
 
@@ -36,11 +66,25 @@
             <div class="game-img">⏳</div>
             <div class="game-info">
                 <h3>Coming Soon</h3>
-                <p>새로운 게임이 준비 중입니다.</p>
+                <p>새로운 웹 기술을 활용한 미니 게임이 곧 추가됩니다.</p>
             </div>
         </div>
     </main>
 
-    <div id="version-tag">Hub v1.0.0</div>
+    <article class="content-section">
+        <h2>무설치 웹 게임 허브에 오신 것을 환영합니다</h2>
+        <p>현대의 웹 기술은 이제 과거의 플래시 게임 수준을 넘어섰습니다. 본 허브 사이트는 별도의 설치나 다운로드 없이 웹 브라우저만으로 즐길 수 있는 고성능 3D 및 2D 게임을 한곳에 모은 플랫폼입니다. HTML5, Three.js, 그리고 Firebase 기술을 결합하여 최적화된 게임 환경을 제공합니다.</p>
+
+        <h3>1. Aim Trainer: FPS 실력 향상의 필수 도구</h3>
+        <p>첫 번째 프로젝트인 '에임 연습장(Aim Trainer)'은 배틀그라운드, 오버워치, 발로란트와 같은 인기 FPS 게임 유저들을 위해 설계되었습니다. 브라우저의 마우스 포인터 잠금(Pointer Lock API)을 활용하여 실제 게임과 동일한 감도를 구현했으며, 실시간 랭킹 시스템을 통해 자신의 실력을 전 세계 유저와 비교해 볼 수 있습니다.</p>
+
+        <h3>2. 향후 추가될 게임: 패턴 피하기(Avoidance)</h3>
+        <p>곧 추가될 '패턴 피하기' 게임은 유저의 순발력과 집중력을 극대화하는 게임입니다. 단순한 회피를 넘어 알고리즘 기반으로 생성되는 복합적인 탄막 패턴을 분석하고 대응하는 과정을 통해 뇌의 활성화를 돕습니다. 이 게임 역시 가벼운 웹 엔진을 기반으로 제작되어 모바일과 데스크톱 어디서든 즐길 수 있도록 배포될 예정입니다.</p>
+
+        <h3>3. 웹 기반 게임의 장점과 기술적 배경</h3>
+        <p>웹 기반 게임은 접근성 면에서 압도적인 우위를 점합니다. 저사양 하드웨어에서도 GPU 가속을 활용해 부드러운 프레임을 유지하며, 데이터베이스 연동을 통해 게임 기록이 안전하게 저장됩니다. 저희 플랫폼은 구글 애드센스와의 파트너십을 통해 모든 콘텐츠를 무료로 제공하며, 지속적인 업데이트를 통해 새로운 장르의 미니 게임들을 순차적으로 공개할 계획입니다.</p>
+    </article>
+
+    <div id="version-tag">Hub v1.0.5</div>
 </body>
 </html>
