@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Hub - FPS & Casual Mini Games</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4133279395991822" crossorigin="anonymous"></script>
+    <style>
+        :root { --primary-color: #f1c40f; --bg-color: #0c0c0c; }
+        body { margin: 0; background: var(--bg-color); color: white; font-family: 'Pretendard', sans-serif; text-align: center; }
+        .header { padding: 60px 20px; background: linear-gradient(to bottom, #1a1a1a, var(--bg-color)); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .game-card { background: #1a1a1a; border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; cursor: pointer; text-decoration: none; color: inherit; }
+        .game-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+        .game-img { width: 100%; height: 160px; background: #333; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+        .game-info { padding: 20px; }
+        .game-info h3 { margin: 0; color: var(--primary-color); }
+        #version-tag { position: fixed; bottom: 12px; right: 18px; font-size: 14px; color: rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 style="font-size: 48px; letter-spacing: 4px;">🎮 GAME HUB</h1>
+        <p>무설치 브라우저 기반 게임 리스트</p>
+    </header>
+
+    <main class="grid">
+        <a href="https://your-aim-trainer-url.vercel.app" class="game-card">
+            <div class="game-img">🎯</div>
+            <div class="game-info">
+                <h3>Aim Trainer</h3>
+                <p>Three.js 기반의 정밀 에임 훈련</p>
+            </div>
+        </a>
+
+        <div class="game-card" style="opacity: 0.5; cursor: default;">
+            <div class="game-img">⏳</div>
+            <div class="game-info">
+                <h3>Coming Soon</h3>
+                <p>새로운 게임이 준비 중입니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="version-tag">Hub v1.0.0</div>
+</body>
+</html>
